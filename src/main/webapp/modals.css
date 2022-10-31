@@ -1,0 +1,12 @@
+.modal {
+  max-width: 600px;
+  height: -webkit-fit-content !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
+}
+
+.modal .btn {
+  background-color: #ff9a3b;
+  color: black;
+}
+/*# sourceMappingURL=modals.css.map */

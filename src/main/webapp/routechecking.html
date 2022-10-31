@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+   <head>
+      <meta http-equiv="content-type"
+		 content="application/xhtml+xml; charset=UTF-8" />
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	  <link rel="stylesheet" type="text/css" href="header.css">
+	  <link rel="stylesheet" type="text/css" href="main.css">
+	  <link rel="stylesheet" type="text/css" href="footer.css">
+
+
+	  
+	 	<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+		<!-- Popper JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="jquery.js"></script>
+	</head>
+   
+   <body>
+	   <header>
+			<div class="product-logo">
+				<a href="/"><img src="../img/hiking-logo.png" /></a>
+			</div>
+	   
+			<div class="menu-links">
+				<div class= "links">
+					<a href="/info-geologia.html">Geologia em Portugal </a>
+					<a href="/mapaGeoPortugal.html">Mapa geológico</a>
+					<a href="/rankings.html">Pontuação dos utilizadores</a>
+					<a href="/alojamentos.html">Alojamento</a>
+					<a href="/important-sites.html">Links úteis</a>
+				</div>
+			</div>
+
+			<div class="burger-button">
+				<div class="burger">
+					<div class="bun first"> </div>
+					<div class="bun second"> </div>
+					<div class="bun third"> </div>
+				</div>
+			</div>
+			
+			<div class="auth-buttons">
+				<div class="a-btns">
+					<!-- Login Button trigger modal -->
+					<button type="button" id="loginModal-btn" class="btn btn-primary btn-sm logged-out" data-toggle="modal" data-target="#loginModal" style="display: none;">Login</button>
+					<!-- Register Button trigger modal -->
+					<button type="button" id="registerModal-btn" class="btn btn-primary btn-sm logged-out" data-toggle="modal" data-target="#registerModal" style="display: none;">Sign Up</button>
+					<a href="#" id="logout" style="display: none;">Logout</a>
+				</div>
+			</div>
+	   </header>
+	   
+	
+	
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="route.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMe47YrPpKbBmTmK7I4jn-bo23KNp6EzM&callback=initMap"></script>
+        <div id="map"></div>
+        <input type="button" class="pure-button pure-button-primary" id="back" value="Back"/>
+        <input type="button" class="pure-button pure-button-primary" id="createMap" value="Create Map"/>
+        <input type="button" class="pure-button pure-button-primary" id="buildMap" value="Build Map"/>
+        <input type="button" class="pure-button pure-button-primary" id="addMap" value="Add Map"/>
+  
+	
+	<footer>
+		<div class="team info">
+			<a href="/teaminfo.html">About us</a>
+			<a href="/contactos.html">Contactos</a>
+		</div>
+		<div class="weather-report">
+			<iframe src="https://www.meteoblue.com/en/weather/widget/daily?geoloc=detect&days=5&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&precipunit=MILLIMETER&coloured=coloured&pictoicon=0&pictoicon=1&maxtemperature=0&maxtemperature=1&mintemperature=0&mintemperature=1&windspeed=0&windspeed=1&windgust=0&winddirection=0&winddirection=1&uv=0&humidity=0&humidity=1&precipitation=0&precipitation=1&precipitationprobability=0&precipitationprobability=1&spot=0&pressure=0&layout=light"  frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" style="width: 270px; height: 343px"></iframe><div><!-- DO NOT REMOVE THIS LINK --><a href="https://www.meteoblue.com/en/weather/week/index?utm_source=weather_widget&utm_medium=linkus&utm_content=daily&utm_campaign=Weather%2BWidget" target="_blank">meteoblue</a></div>
+		</div>
+		<div class="made by">
+			<p>developed by Team Rock It</p>
+			<img src="../img/team-logo.png" alt="logo">
+		</div> 
+	</footer>
+
+	<div class="container">
+		<!-- Login Modal -->
+		<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="loginModalLabel">Login</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form id="login-form">
+							<div class="form-group">
+							<label for="loginEmail">Email address</label>
+							<input type="email" class="form-control" id="loginEmail">
+							</div>
+							<div class="form-group">
+							<label for="loginPassword">Password</label>
+							<input type="password" class="form-control" id="loginPassword">
+							</div>
+							<p>Não tem uma conta? <a href="registo">Registe-se!</a></p>
+							
+							<button id="loginDismiss-btn" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<button id="login-btn" type="submit" value="Submit" class="btn btn-primary">Login</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<!-- Register Modal -->
+		<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="registerModalLabel">Create Account</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form id="register-form">
+							<div class="form-group">
+								<label for="registerFirstName">First name</label>
+								<input type="text" class="form-control" id="registerFirstName">
+							</div>
+							<div class="form-group">
+								<label for="registerLastName">Last name</label>
+								<input type="text" class="form-control" id="registerLastName">
+							</div>
+							<div class="form-group">
+								<label for="registerEmail">Email</label>
+								<input type="email" class="form-control" id="registerEmail">
+							</div>
+							<div class="form-group">
+								<label for="registerPassword">Password</label>
+								<input type="password" class="form-control" id="registerPassword">
+							</div>
+							<div class="form-group">
+								<label for="registerConfirmation">Confirm password</label>
+								<input type="password" class="form-control" id="registerConfirmation">
+							</div>
+							
+							<button id="regDismiss-btn" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<button id="signup-btn"type="submit" value="Submit" class="btn btn-primary">Register</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+	<!-- SDK for Firebase Authentication -->
+	<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-auth.js"></script>
+	<!-- SDK for Firebase Firestore -->
+	<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
+
+	<script>
+		// Your web app's Firebase configuration
+		var firebaseConfig = {
+			apiKey: "AIzaSyD549CgklvnuBECRHlkr1RMkUb6SveNVSA",
+			authDomain: "projetoapdc2.firebaseapp.com",
+			databaseURL: "https://projetoapdc2.firebaseio.com",
+			projectId: "projetoapdc2",
+			storageBucket: "projetoapdc2.appspot.com",
+			messagingSenderId: "852792490548",
+			appId: "1:852792490548:web:14cad4746192046d6ae861"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+
+		// Make auth and firestore references
+		const auth = firebase.auth();
+		const db = firebase.firestore();
+	</script>
+
+	<script src="auth.js"></script>
+	<script src="index.js"></script>
+	</body>
+</html>

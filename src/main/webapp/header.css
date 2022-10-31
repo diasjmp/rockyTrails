@@ -1,0 +1,297 @@
+.modal .btn-primary {
+  background-color: #ff9a3b;
+  border-color: #ff9a3b;
+}
+
+.modal .btn-primary:hover {
+  background-color: crimson;
+  border-color: crimson;
+}
+
+.modal .btn-primary:focus {
+  background-color: crimson;
+  border-color: crimson;
+}
+
+.modal .btn-primary:active {
+  background-color: crimson !important;
+  border-color: crimson !important;
+}
+
+header {
+  height: 150px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  -ms-grid-columns: 100px 1fr 1fr;
+      grid-template-columns: 100px 1fr 1fr;
+  background-color: #eaebef;
+  -webkit-box-shadow: 0px 3px 11px -2px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 3px 11px -2px rgba(0, 0, 0, 0.75);
+  row-gap: 40px;
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
+  padding: 0 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+}
+
+header #logout {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 /3;
+  display: block;
+  margin-top: 24px;
+  position: fixed;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header .menu-open {
+  visibility: visible !important;
+  left: 0 !important;
+  pointer-events: all !important;
+  opacity: 1 !important;
+}
+
+header .menu-open-button {
+  z-index: 5;
+}
+
+header .menu-open-button .burger {
+  background-color: transparent !important;
+}
+
+header .menu-open-button .burger .first {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-top: 23px !important;
+  border-color: #ffbd45 !important;
+  background-color: #ffbd45 !important;
+}
+
+header .menu-open-button .burger .second {
+  border: none !important;
+  background: transparent !important;
+}
+
+header .menu-open-button .burger .third {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-top: -7px !important;
+  border-color: #ffbd45 !important;
+  background-color: #ffbd45 !important;
+}
+
+header .product-logo {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
+  height: 150px;
+  position: relative;
+  z-index: 5;
+}
+
+header .product-logo a {
+  height: 0;
+}
+
+header .product-logo a img {
+  width: 100px;
+  margin-top: 35px;
+  height: auto;
+  position: absolute;
+}
+
+header #userarea {
+  position: absolute;
+  left: 140px;
+  top: 30%;
+  background-color: #ff9a3b !important;
+}
+
+header .gone {
+  visibility: hidden;
+  position: absolute;
+  pointer-events: none;
+}
+
+header .menu-links {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / 4;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: #eaebef;
+  pointer-events: none;
+  opacity: 0;
+  left: 0;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+header .menu-links .links {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  row-gap: 50px;
+  margin-top: 200px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+header .menu-links .links a {
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+}
+
+header .menu-links .links a:hover {
+  color: orange;
+}
+
+header .auth-buttons {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin: 0 auto;
+  margin-top: 65px;
+  position: relative;
+}
+
+header .auth-buttons .a-btns {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+  -ms-grid-rows: 30px;
+      grid-template-rows: 30px;
+}
+
+header .auth-buttons .btn {
+  background-color: #ff9a3b !important;
+  border-color: #ff9a3b !important;
+  color: black !important;
+  min-width: 67px;
+}
+
+header .auth-buttons .btn:hover {
+  background-color: crimson !important;
+  border-color: crimson !important;
+}
+
+header .auth-buttons .btn:focus {
+  background-color: crimson;
+  border-color: crimson;
+}
+
+header .auth-buttons .btn:active {
+  background-color: crimson !important;
+  border-color: crimson !important;
+}
+
+header .burger-button {
+  margin-top: 50px;
+  -ms-grid-column: 3;
+  grid-column: 3;
+  margin-right: 30px;
+}
+
+header .burger-button .burger {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ffbd45;
+  margin: 0 auto;
+  margin-right: 0;
+}
+
+header .burger-button .burger .bun {
+  border: 1px solid #ffbd45;
+  width: 25px;
+  margin-left: 12px;
+  background-color: #ffbd45;
+  margin-top: 6px;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+header .burger-button .burger .bun:first-child {
+  margin-top: 16px;
+}
+
+header form {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  margin-top: 25px;
+}
+
+@media only screen and (min-width: 800px) {
+  header #userarea {
+    right: 25px !important;
+    left: initial !important;
+    top: 68% !important;
+  }
+  header .auth-buttons {
+    margin-top: 35px;
+  }
+  header .auth-buttons .a-btns {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+    -ms-grid-rows: 30px;
+        grid-template-rows: 30px;
+  }
+  header .burger-button {
+    display: none;
+  }
+  header .menu-links {
+    background-color: transparent;
+    visibility: visible !important;
+    position: initial !important;
+    opacity: 1 !important;
+    width: auto !important;
+    height: auto !important;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1 / 3;
+    pointer-events: all !important;
+  }
+  header .menu-links .links {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 0;
+    margin-top: 0;
+    grid-column-gap: 15px;
+  }
+  header .menu-links .links a {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 65px;
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=header.css.map */

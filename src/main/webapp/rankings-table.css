@@ -1,0 +1,61 @@
+.rankings-intro {
+  font-weight: bold;
+}
+
+.rankings-table #rankings-list span {
+  text-align: center;
+}
+
+.rankings-table #rankings-list #legend-ranking {
+  background-color: crimson;
+}
+
+.rankings-table #rankings-list #legend-ranking p {
+  color: white !important;
+  font-weight: bold;
+  text-align: center;
+}
+
+.rankings-table #rankings-list li {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (calc( (100% - 25px) / 2))[2];
+      grid-template-columns: repeat(2, calc( (100% - 25px) / 2));
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
+  position: relative;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+
+.rankings-table #rankings-list li:not(:first-child) {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.rankings-table #rankings-list li:not(:first-child):not(:last-child):after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 100%;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  height: 1px;
+  border-bottom: 1px solid black;
+  bottom: 0;
+}
+
+.rankings-table #rankings-list li p {
+  height: 100%;
+  width: 100%;
+  font-size: 70%;
+  text-align: center;
+  vertical-align: middle;
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+/*# sourceMappingURL=rankings-table.css.map */

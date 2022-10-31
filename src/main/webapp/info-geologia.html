@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="header.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="footer.css">
+	<link rel="stylesheet" type="text/css" href="modals.css">
+
+	<title>Geologia em Portugal</title>
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+		crossorigin="anonymous"></script>
+
+	<script src="jquery.js"></script>
+</head>
+
+<body class="grey lighten-3">
+	<header>
+		<div class="product-logo">
+			<a href="/"><img src="../img/hiking-logo.png" /></a>
+		</div>
+
+		<div class="menu-links">
+			<div class="links">
+				<a href="/info-geologia.html">Geologia em Portugal </a>
+				<a href="/mapaGeoPortugal.html">Mapa geológico</a>
+				<a href="/rankings.html">Pontuações dos utilizadores</a>
+				<a href="/routecheck.html">Rotas e alojamentos</a>
+				<a href="/important-sites.html">Links úteis</a>
+			</div>
+		</div>
+
+		<a id="userarea" class="btn " >Perfil</a>
+
+		<div class="burger-button">
+			<div class="burger">
+				<div class="bun first"> </div>
+				<div class="bun second"> </div>
+				<div class="bun third"> </div>
+			</div>
+		</div>
+
+		<div class="auth-buttons">
+			<div class="a-btns">
+				<!-- Login Button trigger modal -->
+				<button type="button" id="loginModal-btn" class="btn orange darken-2 logged-out modal-trigger"
+					data-toggle="modal" data-target="login-modal" style="visibility: hidden; pointer-events: none; position:absolute;">Login</button>
+
+				<a href="./signup.html">
+					<input type="button" class="btn logged-out" value="SIGN UP">
+				</a>
+
+				<a id="logout" class="btn logged-in" style="visibility: hidden; pointer-events: none; position:absolute;">Logout</a>
+			</div>
+		</div>
+
+	</header>
+
+	<main>
+		<div class="geology-info">
+			<h4>Geologia em Portugal</h4>
+			<div class= 'geo-intro'>
+				<p>Localizado no extremo Sul da Península Ibérica encontra-se Portugal, um país com um património geológico bastante rico e diverso, cuja disposição do território foi sendo alterada pela transformação do mesmo ao longo do tempo.</br>
+					No século XVIII surgiram os primeiros mineralogistas seguidos de estratígrafos, paleontólogos e petrólogos no século XIX tendo a cartografia geológica sido começada em 1857.</br>
+					Desde então tornou-se evidente que é possível encontrar uma pletora de rochas de quase todos os tipos no nosso país, com alguns exemplos sendo os basaltos (nas ilhas), areias, calcários, margas, xistos, quartzitos, gnaisses, micaxistos, entre outros.
+					</p>
+					<p>De forma resumida, o território português continental pode ser caracterizado de acordo com os seguintes conjuntos:</p>
+
+					<p>1. O soco antigo, constituído essencialmente por rochas quer magmáticas, em especial granitos, quer metassedimentares, do Precâmbrico Superior ao Carbónico, profundamente afectadas pela Orogenia Hercínica.</br>
+						2. As bacias sedimentares mesozóicas (Lusitânica e Algarvia), onde se depositaram calcários, margas e arenitos, de ambientes marinhos de plataforma a fluviais, excepcionalmente fossilíferas, tendo nomeadamente revelado uma grande riqueza em fósseis de dinossauros (ossos e pegadas). De salientar, também, os fenómenos cársicos que se observam nas regiões calcárias, e que se deram durante o Quaternário.</br>
+						3. Os 3 maciços magmáticos do final do Cretácico: Sintra, Sines e Monchique, cuja instalação foi acompanhada por intenso vulcanismo sub-aéreo (Lisboa).</br>
+						4. As bacias cenozóicas do Tejo e Sado, de fácies marinhas a continentais, por vezes com ricas faunas de vertebrados.</br>
+						5. As formações dunares, móveis e consolidadas, terraços marinhos e fluviais, aluviões e areias de praia do Quaternário, bem como vestígios da glaciação Würm (Serras da Estrela e Gerês).” (<a href="http://www.cienciaviva.pt/img/upload/Patrimonio%20Geo%20Portug%C3%AAs_Ramalho.pdf">http://www.cienciaviva.pt/img/upload/Patrimonio%20Geo%20Portug%C3%AAs_Ramalho.pdf</a>)</br>
+						</p>
+
+						<p>As nossas ilhas no meio do oceano também são, por si só, detentoras de imensa riqueza geológica, sendo ilhas de génese vulcânica, com formações rochosas únicas e rochas magmáticas, como o granito.</p>
+						<div class='intro-image'>
+							<img src="../img/Serra-do-cercal.jpg" alt="serra">
+						</div>
+						
+						</div>
+			</div>
+			<div class='geo-content'>
+				<p>De Norte a Sul do país é bastante frequente ficarmos fascinados com as mais diversas paisagens e locais pitorescos. Mesmo as cidades, esculpidas pela ocupação territorial e disputas, têm um terreno com uma história para mostrar. 
+				</p>
+				<p>De entre muitas regiões apelativas, algumas albergam locais considerados como Património Mundial, segundo a UNESCO. A mais recente ingressão foi a Serra da Estrela, no dia 2 de setembro de 2019, que passou a ser um Geopark Mundial.</p>
+				<p>Situada na região do Centro/Beiras de Portugal, da qual fazem parte as serras e montanhas do Sistema Montejunto-Estrela, no qual se inclui o Maciço Calcário Estremenho (<a href="https://pt.wikipedia.org/wiki/Maci%C3%A7o_Calc%C3%A1rio_Estremenho">https://pt.wikipedia.org/wiki/Maci%C3%A7o_Calc%C3%A1rio_Estremenho</a>), esta cadeia montanhosa é casa a uma das maiores altitudes de Portugal Continental. Torre, o seu ponto mais elevado, tem 1993 metros de altura, sendo apenas superado pela Montanha do Pico, nos Açores, com mais 358 metros.
+				</br>Este é um local rico em fauna e flora, onde as formações rochosas se impõem com majestade e escondem segredos em pleno campo aberto, um local com um potencial geológico imenso. 
+					</p>
+			</div>
+
+			<div class='geo-tecnical'>
+				<h5><b>De forma a complementar o interesse dos nossos utilizadores e para promover o património e cultura geológica do nosso país, expomos em baixo algumas considerações de carácter mais técnico.</b>
+				</h5>
+
+				<p>Localizada a sul da Serra do Cercal, a região de Odemira engloba bacia hidrográfica do Rio Mira, desde a região do Cercal (a norte) até Santa Clara a Velha (a sul) e, estende-se até ao litoral, na costa desde Porto Covo até Odeceixe.
+					Em termos geomorfológicos esta região é dominada pela Planície Litoral Ocidental, que constitui uma faixa relativamente estreita de orientação N-S, situada junto ao litoral.
+					</p>
+
+					<p>A Planície Litoral Ocidental ocorre a uma altitude máxima de 150 m, tem uma largura que varia entre 5 km e 15 km e inclina suavemente para Oeste, na direção do mar. Esta superfície representa uma antiga plataforma de abrasão marinha e foi afectada por diversas falhas que a segmentaram e deslocaram diferenciadamente, originando diversas zonas deprimidas (ex. S.Teotónio e Aljezur) onde as sequências sedimentares recentes e de origem marinha ficaram preservadas da erosão. 
+					</br>O limite Este desta planície faz-se de forma gradual para uma superfície aplanada de rochas do soco Paleozóico, ou abruptamente contra o relevo da serra do Cercal, que constitui a zona de Serras Litorais nesta região.
+						</p>
+
+					<p>Odemira enquadra-se na Faixa Piritosa Ibérica (FPI), que constitui uma região mineira considerada, uma província metalogénica de sulfuretos maciços polimetálicos de dimensão mundial. Esta região encontra-se marcada por projectos mineiros de excelência, como as minas de Neves Corvo e de Aljustrel, mas também
+						por várias minas em fase de abandono como por exemplo a mina de São
+						Domingos. 
+						</p>
+
+						<div class='FAI-geo'>
+							<img src="../img/FAI.jpg" alt="FAI">
+						</div>
+						
+
+			</div>
+
+			<p>Existem muitas mais curiosidades à sua espera se decidir continuar à procura esperemos que os exemplos que lhe demos tenham despertado ou aprofundado o seu interesse pela geologia!</p>
+		</div>
+	</main>
+
+	<footer>
+		<div class="team info">
+			<a href="/teaminfo.html">About us</a>
+			<a href="/contactos.html">Contactos</a>
+		</div>
+		<div class="weather-report">
+			<iframe
+				src="https://www.meteoblue.com/en/weather/widget/daily?geoloc=detect&days=5&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&precipunit=MILLIMETER&coloured=coloured&pictoicon=0&pictoicon=1&maxtemperature=0&maxtemperature=1&mintemperature=0&mintemperature=1&windspeed=0&windspeed=1&windgust=0&winddirection=0&winddirection=1&uv=0&humidity=0&humidity=1&precipitation=0&precipitation=1&precipitationprobability=0&precipitationprobability=1&spot=0&pressure=0&layout=light"
+				frameborder="0" scrolling="NO" allowtransparency="true"
+				sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox"
+				style="width: 270px; height: 343px"></iframe>
+			<div>
+				<!-- DO NOT REMOVE THIS LINK --><a
+					href="https://www.meteoblue.com/en/weather/week/index?utm_source=weather_widget&utm_medium=linkus&utm_content=daily&utm_campaign=Weather%2BWidget"
+					target="_blank">meteoblue</a></div>
+		</div>
+		<div class="made by">
+			<p>developed by Team Rock It</p>
+			<img src="../img/team-logo.png" alt="logo">
+		</div>
+	</footer>
+
+	<div id="login-modal" class="modal">
+		<div class="modal-content">
+			<h4>Login</h4><br />
+			<form id="login-form">
+				<div class="input-field">
+					<input type="email" id="login-email" required />
+					<label for="login-email">Email address</label>
+				</div>
+				<div class="input-field">
+					<input type="password" id="login-password" required />
+					<label for="login-password">Your password</label>
+				</div>
+				<button class="btn orange darken-2 z-depth-0">Login</button>
+			</form>
+		</div>
+	</div>
+
+	<div id="functionality-scripts">
+
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+		<!-- SDK for Firebase Authentication -->
+		<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-auth.js"></script>
+		<!-- SDK for Firebase Firestore -->
+		<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
+
+		<script>
+			// Your web app's Firebase configuration
+			var firebaseConfig = {
+				apiKey: "AIzaSyD549CgklvnuBECRHlkr1RMkUb6SveNVSA",
+				authDomain: "projetoapdc2.firebaseapp.com",
+				databaseURL: "https://projetoapdc2.firebaseio.com",
+				projectId: "projetoapdc2",
+				storageBucket: "projetoapdc2.appspot.com",
+				messagingSenderId: "852792490548",
+				appId: "1:852792490548:web:14cad4746192046d6ae861"
+			};
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+
+			// Make auth and firestore references
+			const auth = firebase.auth();
+			const db = firebase.firestore();
+		</script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script src="auth.js"></script>
+		<script src="index.js"></script>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+footer {
+  width: 100%;
+  background-color: #ffbd45;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  padding: 25px 20px;
+  grid-row-gap: 15px;
+}
+
+footer h1,
+footer h2,
+footer h3,
+footer h4,
+footer h5,
+footer h6,
+footer p,
+footer a {
+  color: black !important;
+  text-decoration: none !important;
+}
+
+footer a:hover {
+  color: white !important;
+  text-decoration: underline !important;
+}
+
+footer .weather-report {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+footer .team {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  row-gap: 30px;
+}
+
+footer .team a {
+  font-size: 30px;
+}
+
+footer .made {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+footer .made img {
+  width: auto;
+  max-height: 220px;
+}
+
+@media only screen and (min-width: 800px) {
+  footer {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  footer .weather-report,
+  footer .made {
+    margin: 0;
+  }
+}
+/*# sourceMappingURL=footer.css.map */

@@ -1,0 +1,87 @@
+#map {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    display: block;
+    height: 60vh;
+    margin-bottom: 20px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body h2 {
+    margin-bottom: 20px;
+}
+
+.gm-svpc {
+    display: none;
+}
+
+main {
+    padding: 25px;
+    display: block;
+    margin-top: 200px;
+}
+
+#comments {
+    visibility: hidden;
+    position: absolute;
+    pointer-events: none;
+}
+
+#comments #box-wrapper p {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+#comments #box-wrapper #cmt-box {
+    height: 30%;
+    width: 40%;
+}
+
+.visible-cmt-box {
+    visibility: visible !important;
+    position: initial !important;
+    pointer-events: all !important;
+}
+
+#comments-box {
+    visibility: hidden;
+    margin-top: 30px;
+    max-height: 200px;
+    overflow: hidden;
+    overflow-y: scroll;
+    border: 1.5px solid black;
+}
+
+#comments-list {
+    margin-bottom: 0;
+}
+
+#comments-list li {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    height: 50px;
+    border: 1px grey solid;
+    
+}
+
+
+#comments-list li span:not(:first-child) {
+    margin-left: 15px;
+
+}
+
+
+#comments-list li span:first-child {
+    color: #ff5200;
+    font-weight: bold;
+    text-align: center;
+    border-right: 1px grey solid;
+    line-height: 50px;
+}

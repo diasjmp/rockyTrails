@@ -1,0 +1,139 @@
+#map {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    display: block;
+    height: 60vh;
+    margin-bottom: 20px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body h2 {
+    margin-bottom: 20px;
+}
+
+.gm-svpc {
+    display: none;
+}
+
+main {
+    padding: 25px;
+    display: block;
+    margin-top: 200px;
+}
+
+#comments {
+    visibility: hidden;
+    position: absolute;
+    pointer-events: none;
+}
+
+#comments #box-wrapper p {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+#comments #box-wrapper #cmt-box {
+    height: 30%;
+    width: 40%;
+}
+
+.visible-cmt-box {
+    visibility: visible !important;
+    position: initial !important;
+    pointer-events: all !important;
+}
+
+#comments-box {
+    visibility: hidden;
+    margin-top: 20px;
+    max-height:600px;
+    overflow: hidden;
+    overflow-y: scroll;
+    border: 1.5px #cc7a00 solid;
+    background-color: #f2f2f2;
+}
+
+#comments-box #comments-header {
+    margin-top: 10px;
+    margin-left: 10px;
+    border-bottom: 3px #cc7a00 solid;
+}
+
+#comments-list {
+    margin-bottom: 0;
+}
+
+#comments-list li {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    height: 50px;
+    
+}
+
+
+#comments-list li span:not(:first-child) {
+    margin-left: 15px;
+    margin-top: 13px;
+    border-bottom: 0.1px #cc7a00 solid;
+
+}
+
+
+#comments-list li span:first-child {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+    border-right: 4px #cc7a00 solid;
+    border-radius: 5%;
+}
+
+#input-fields,
+#admin-edits {
+    margin-top: 30px;
+    display: grid;
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+}
+
+#input-fields #rname,
+#admin-edits #rname {
+    max-width: 400px;
+}
+
+#input-fields label,
+#admin-edits label {
+    color: orange;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#input-fields #rdifficulty,
+#admin-edits #rdifficulty {
+    width: fit-content;
+}
+
+.input-fields-activated,
+.admin-edits-activated{
+    visibility: visible !important;
+    pointer-events: all !important;
+    position: initial !important;
+}
+
+#finishEdit {
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute ;
+}
+
+.admin-not-logged-in {
+    display: none  !important;
+}
